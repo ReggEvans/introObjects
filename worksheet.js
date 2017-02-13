@@ -184,3 +184,27 @@ var plays = [
     {title: "Two Blind Mice", author: "Samuel and Bella Spewack", year: 1949}
 ]
 
+
+var where = function(listOfObjects, propObject) {
+    var newArray = []
+    for(var i = 0; i < listOfObjects.length; i++) {
+        var object = listOfObjects[i]
+        for(var prop in object) {
+            
+
+
+
+            
+        }
+    }
+    return newArray
+}
+
+
+
+
+
+
+
+
+
