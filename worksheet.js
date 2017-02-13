@@ -11,6 +11,16 @@
 
 // see test.js for example usage
 
+var flipColor = function(colorObj) {
+	if (colorObj['color'] === 'blue') {
+		colorObj['color'] = 'red'
+	}
+    else if (colorObj['color'] === 'red') {
+			 colorObj['color'] = 'blue'
+	}
+    return colorObj
+}
+
 
 // Part 1
 
@@ -19,6 +29,14 @@
 // of strings, where each string is a customer's full name.
 
 // see test.js for example usage
+
+var getFullNames = function(objArray) {
+	var arrayOfStrings = []
+	for (var i = 0; i < objArray.length; i++) {
+        arrayOfStrings.push(objArray[i]['first'] + " " + objArray[i]['last'])
+    }
+	return arrayOfStrings
+}
 
 // Part 2
 
@@ -34,6 +52,25 @@
 
 // see test.js for example usage
 
+var generateDog = function(dogName) {
+    var dogObject = {
+        name: dogName,
+        legs: 4,
+        color: 'yellow',
+        weight: 20,
+        speak: function(dogStr) {
+            var dogSpeakArr = []
+            var dogStrArray = dogStr.split(' ')
+            for (var i = 0; i < dogStrArray.length; i++) {
+                var words = dogStrArray[i]
+                dogSpeakArr.push(words.charAt[0] = 'r' + words.slice(1))
+            }
+            return dogSpeakArr.join(' ')
+        }
+    }
+    return dogObject
+}
+
 
 // Part 3
 
@@ -45,6 +82,14 @@
 
 // see test.js for example usage
 
+var pluck = function(objectName, prop) {
+    var nameStr = []
+    for (var i = 0; i < objectName.length; i++) {
+        nameStr.push(objectName[i][prop])
+    }
+    return nameStr
+}
+
 // Part 4
 
 // Write a function called getCounts that takes a string of text as input and returns
@@ -54,6 +99,25 @@
 
 
 // check test.js for examples of how this function should be used.
+
+
+var getCounts = function(strOfText) {
+    var wordCountObject = {}
+    var arrayOfText = strOfText.replace(/[^A-Za-z0-9" "]/g,"").toLowerCase().split(/\W+/)
+    for (var i = 0; i < arrayOfText.length; i++) {
+        var counter = 0
+        if (wordCountObject[arrayOfText[i]] === undefined) {
+            for (var j = 0; j < arrayOfText.length; j++) {
+                if (arrayOfText[i] === arrayOfText[j]) {
+                    counter += 1
+                }
+                wordCountObject[arrayOfText[i]] = counter
+            }
+        }
+    }
+    return wordCountObject
+}
+
 
 // ADVENTURE MODE ( 5 - 8 )
 
@@ -78,6 +142,14 @@
 //   failing: 'structural_integrity'
 // }
 
+var reverseObject = function(object) {
+    var newObject = {}
+    for (var prop in object) {
+        newObject[object[prop]] = prop
+    }
+    return newObject 
+}
+
 
 // Part 6
 
@@ -87,6 +159,14 @@
 
 var users = [{obama: 'president@gmail.com',hobby: 'basketball'},{trump: 'americamoneywin@yahoo.com', hobby:'dealmaking'},{bush: 'jeb!@hotmail.com',hobby:'portraiture'}]
 // should yield: [{'president@gmail.com': 'obama',basketball: 'hobby'}, ....]
+
+var reverseAll = function(arrayOfObjects) {
+    var reversedArray = []
+    for(var i = 0; i < arrayOfObjects.length; i++) {
+		reversedArray.push(reverseObject(arrayOfObjects[i]))
+    }
+    return reversedArray
+}
 
 // Part 7
 
