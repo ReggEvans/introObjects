@@ -2,4 +2,4 @@
 
 **Iron Yard Class Assignment**
 
-This repo container javascript object exercises.
+This repo contains javascript object exercises.
