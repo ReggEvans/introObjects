@@ -13,6 +13,7 @@ git clone git@github.com:reggevans/introObjects.git
 cd introObjects
 git remote remove origin
 npm install
+npm install -g mocha (you only need to do this once, ever)
 write answers in worksheet.js
 check work with **bash checkWork.sh** in terminal
 ```
